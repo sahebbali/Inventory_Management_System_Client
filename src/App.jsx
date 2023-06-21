@@ -18,9 +18,9 @@ import ProfilePage from "./pages/Users/ProfilePage";
 // import CategoryListPage from "./pages/Category/CategoryListPage";
 import CustomerCreateUpdatePage from "./pages/Customer/CustomerCreateUpdatePage";
 import CustomerListPage from "./pages/Customer/CustomerListPage";
-// import ExpenseTypeCreateUpdatePage from "./pages/ExpenseType/ExpenseTypeCreateUpdatePage";
-// import ExpenseListPage from "./pages/Expense/ExpenseListPage";
-// import ExpenseCreateUpdatePage from "./pages/Expense/ExpenseCreateUpdatePage";
+import ExpenseTypeCreateUpdatePage from "./pages/ExpenseType/ExpenseTypeCreateUpdatePage";
+import ExpenseListPage from "./pages/Expense/ExpenseListPage";
+import ExpenseCreateUpdatePage from "./pages/Expense/ExpenseCreateUpdatePage";
 // import ProductCreateUpdatePage from "./pages/Product/ProductCreateUpdatePage";
 // import ProductListPage from "./pages/Product/ProductListPage";
 // import PurchaseCreateUpdatePage from "./pages/Purchase/PurchaseCreateUpdatePage";
@@ -35,8 +35,8 @@ import CustomerListPage from "./pages/Customer/CustomerListPage";
 // import SalesListPage from "./pages/Sales/SalesListPage";
 import SupplierCreateUpdatePage from "./pages/Supplier/SupplierCreateUpdatePage";
 import SupplierListPage from "./pages/Supplier/SupplierListPage";
-// import ExpenseTypeList from "./components/ExpenseType/ExpenseTypeList";
-// import ExpenseTypeListPage from "./pages/ExpenseType/ExpenseTypeListPage";
+import ExpenseTypeList from "./components/ExpenseType/ExpenseTypeList";
+import ExpenseTypeListPage from "./pages/ExpenseType/ExpenseTypeListPage";
 const App = () => {
     if(getToken()){
         return (
@@ -52,11 +52,11 @@ const App = () => {
                         <Route exact path="/CustomerCreateUpdatePage" element={<CustomerCreateUpdatePage />}/>
                         <Route exact path="/CustomerListPage" element={<CustomerListPage />}/>
 
-                        {/* <Route exact path="/ExpenseTypeCreateUpdatePage" element={<ExpenseTypeCreateUpdatePage />}/>
+                        <Route exact path="/ExpenseTypeCreateUpdatePage" element={<ExpenseTypeCreateUpdatePage />}/>
                         <Route exact path="/ExpenseTypeListPage" element={<ExpenseTypeListPage />}/>
 
                         <Route exact path="/ExpenseCreateUpdatePage" element={<ExpenseCreateUpdatePage />}/>
-                        <Route exact path="/ExpenseListPage" element={<ExpenseListPage />}/> */}
+                        <Route exact path="/ExpenseListPage" element={<ExpenseListPage />}/>
 
                         {/* <Route exact path="/ProductCreateUpdatePage" element={<ProductCreateUpdatePage />}/>
                         <Route exact path="/ProductListPage" element={<ProductListPage />}/> */}
