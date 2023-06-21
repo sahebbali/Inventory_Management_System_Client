@@ -15,8 +15,8 @@ import ProfilePage from "./pages/Users/ProfilePage";
 // import BrandListPage from "./pages/Brand/BrandListPage";
 // import CategoryCreateUpdatePage from "./pages/Category/CategoryCreateUpdatePage";
 // import CategoryListPage from "./pages/Category/CategoryListPage";
-// import CustomerCreateUpdatePage from "./pages/Customer/CustomerCreateUpdatePage";
-// import CustomerListPage from "./pages/Customer/CustomerListPage";
+import CustomerCreateUpdatePage from "./pages/Customer/CustomerCreateUpdatePage";
+import CustomerListPage from "./pages/Customer/CustomerListPage";
 // import ExpenseTypeCreateUpdatePage from "./pages/ExpenseType/ExpenseTypeCreateUpdatePage";
 // import ExpenseListPage from "./pages/Expense/ExpenseListPage";
 // import ExpenseCreateUpdatePage from "./pages/Expense/ExpenseCreateUpdatePage";
@@ -43,15 +43,15 @@ const App = () => {
                 <BrowserRouter>
                     <Routes>
                         {/* <Route exact path="/BrandCreateUpdatePage" element={<BrandCreateUpdatePage />}/>
-                        <Route exact path="/BrandListPage" element={<BrandListPage />}/>
+                        <Route exact path="/BrandListPage" element={<BrandListPage />}/> */}
 
-                        <Route exact path="/CategoryCreateUpdatePage" element={<CategoryCreateUpdatePage />}/>
-                        <Route exact path="/CategoryListPage" element={<CategoryListPage />}/>
+                        {/* <Route exact path="/CategoryCreateUpdatePage" element={<CategoryCreateUpdatePage />}/>
+                        <Route exact path="/CategoryListPage" element={<CategoryListPage />}/> */}
 
                         <Route exact path="/CustomerCreateUpdatePage" element={<CustomerCreateUpdatePage />}/>
                         <Route exact path="/CustomerListPage" element={<CustomerListPage />}/>
 
-                        <Route exact path="/ExpenseTypeCreateUpdatePage" element={<ExpenseTypeCreateUpdatePage />}/>
+                        {/* <Route exact path="/ExpenseTypeCreateUpdatePage" element={<ExpenseTypeCreateUpdatePage />}/>
                         <Route exact path="/ExpenseTypeListPage" element={<ExpenseTypeListPage />}/>
 
                         <Route exact path="/ExpenseCreateUpdatePage" element={<ExpenseCreateUpdatePage />}/>
