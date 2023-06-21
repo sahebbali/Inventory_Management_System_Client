@@ -1,4 +1,4 @@
-import cogoToast from "cogo-toast";
+import toast, { Toaster } from 'react-hot-toast';
 let EmailRegx = /\S+@\S+\.\S+/;
 let MobileRegx = /(^(\+88|0088)?(01){1}[3456789]{1}(\d){8})$/;
 class FormHelper {
@@ -12,10 +12,10 @@ class FormHelper {
         return !EmailRegx.test(value);
     }
     ErrorToast(msg) {
-        cogoToast.error(msg, { position: "bottom-center" });
+        toast.error(msg, { position: "bottom-center" });
     }
     SuccessToast(msg) {
-        cogoToast.success(msg, { position: "bottom-center" });
+        toast.success(msg, { position: "bottom-center" });
     }
     getBase64(file) {
         return new Promise((resolve, reject) => {
