@@ -23,16 +23,16 @@ import ExpenseListPage from "./pages/Expense/ExpenseListPage";
 import ExpenseCreateUpdatePage from "./pages/Expense/ExpenseCreateUpdatePage";
 import ProductCreateUpdatePage from "./pages/Product/ProductCreateUpdatePage";
 import ProductListPage from "./pages/Product/ProductListPage";
-// import PurchaseCreateUpdatePage from "./pages/Purchase/PurchaseCreateUpdatePage";
-// import PurchaseListPage from "./pages/Purchase/PurchaseListPage";
+import PurchaseCreateUpdatePage from "./pages/Purchase/PurchaseCreateUpdatePage";
+import PurchaseListPage from "./pages/Purchase/PurchaseListPage";
 import PurchaseReportPage from "./pages/Report/PurchaseReportPage";
 import ReturnReportPage from "./pages/Report/ReturnReportPage";
 import SaleReportPage from "./pages/Report/SaleReportPage";
 import ExpenseReportPage from "./pages/Report/ExpenseReportPage";
-// import ReturnCreateUpdatePage from "./pages/Return/ReturnCreateUpdatePage";
-// import ReturnListPage from "./pages/Return/ReturnListPage";
-// import SalesCreateUpdatePage from "./pages/Sales/SalesCreateUpdatePage";
-// import SalesListPage from "./pages/Sales/SalesListPage";
+import ReturnCreateUpdatePage from "./pages/Return/ReturnCreateUpdatePage";
+import ReturnListPage from "./pages/Return/ReturnListPage";
+import SalesCreateUpdatePage from "./pages/Sales/SalesCreateUpdatePage";
+import SalesListPage from "./pages/Sales/SalesListPage";
 import SupplierCreateUpdatePage from "./pages/Supplier/SupplierCreateUpdatePage";
 import SupplierListPage from "./pages/Supplier/SupplierListPage";
 import ExpenseTypeList from "./components/ExpenseType/ExpenseTypeList";
@@ -61,14 +61,14 @@ const App = () => {
                         <Route exact path="/ProductCreateUpdatePage" element={<ProductCreateUpdatePage />}/>
                         <Route exact path="/ProductListPage" element={<ProductListPage />}/> 
 
-                        {/* <Route exact path="/PurchaseCreateUpdatePage" element={<PurchaseCreateUpdatePage />}/>
-                        <Route exact path="/PurchaseListPage" element={<PurchaseListPage />}/> */}
+                        <Route exact path="/PurchaseCreateUpdatePage" element={<PurchaseCreateUpdatePage />}/>
+                        <Route exact path="/PurchaseListPage" element={<PurchaseListPage />}/> 
 
-                        {/* <Route exact path="/ReturnCreateUpdatePage" element={<ReturnCreateUpdatePage />}/>
-                        <Route exact path="/ReturnListPage" element={<ReturnListPage />}/> */}
+                        <Route exact path="/ReturnCreateUpdatePage" element={<ReturnCreateUpdatePage />}/>
+                        <Route exact path="/ReturnListPage" element={<ReturnListPage />}/>
 
-                        {/* <Route exact path="/SalesCreateUpdatePage" element={<SalesCreateUpdatePage />}/>
-                        <Route exact path="/SalesListPage" element={<SalesListPage />}/> */}
+                        <Route exact path="/SalesCreateUpdatePage" element={<SalesCreateUpdatePage />}/>
+                        <Route exact path="/SalesListPage" element={<SalesListPage />}/> 
 
                         <Route exact path="/SupplierCreateUpdatePage" element={<SupplierCreateUpdatePage />}/>
                         <Route exact path="/SupplierListPage" element={<SupplierListPage />}/>
