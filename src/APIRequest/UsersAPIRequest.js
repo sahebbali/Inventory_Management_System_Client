@@ -11,26 +11,27 @@ const AxiosHeader={headers:{"token":getToken()}}
 
 export async function LoginRequest(email,password){
    try {
-       debugger;
+    
        store.dispatch(ShowLoader())
-       debugger;
+     
        let URL=BaseURL+"/Login";
-       debugger;
+       
        let PostBody={"email":email,"password":password}
-       debugger;
+    
        let res =await axios.post(URL,PostBody);
-       debugger;
+    
        setToken(res.data['token']);
-       debugger;
+   
        setUserDetails(res.data['data']);
-       debugger;
+  
        SuccessToast("Login Success")
-       debugger;
+     
        store.dispatch(HideLoader())
-       debugger;
+     
        return true;
    }
    catch (e) {
+    console.log(e)
        store.dispatch(HideLoader())
        ErrorToast("Invalid Email or Password")
        return  false;

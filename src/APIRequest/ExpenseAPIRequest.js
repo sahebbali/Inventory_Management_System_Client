@@ -71,7 +71,7 @@ export async function CreateExpenseRequest(PostBody,ObjectID) {
         if(ObjectID!==0){
             URL = BaseURL+"/UpdateExpenses/"+ObjectID;
         }
-        debugger;
+      
         const result = await axios.post(URL,PostBody,AxiosHeader)
         store.dispatch(HideLoader())
         if (result.status === 200 && result.data['status'] === "success") {
@@ -106,13 +106,13 @@ export async function FillExpenseFormRequest(ObjectID) {
             store.dispatch(OnChangeExpenseInput({Name:"Note",Value:FormValue['Note']}));
             return  true;
         } else {
-            debugger;
+           
             ErrorToast("Request Fail ! Try Again")
             return false;
         }
     }
     catch (e) {
-        debugger;
+      
         ErrorToast("Something Went Wrong")
         store.dispatch(HideLoader())
         return  false

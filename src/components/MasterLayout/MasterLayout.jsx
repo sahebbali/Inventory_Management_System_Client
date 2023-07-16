@@ -8,7 +8,7 @@ import { IoCreateOutline } from 'react-icons/io5';
 import { RiDashboardLine } from 'react-icons/ri';
 import { TbTruckDelivery } from 'react-icons/tb';
 import { BsTruck } from 'react-icons/bs';
-import logo from "../../assets/images/Logo.svg"
+import logo from "../../assets/images/log.png"
 import {getUserDetails, removeSessions} from "../../helper/SessionHelper";
 const MasterLayout = (props) => {
   let contentRef, sideNavRef,topNavRef = useRef();
@@ -294,60 +294,40 @@ const MasterLayout = (props) => {
             <img src={logo} className="logo"/>
           </NavLink>
 
-          <Accordion defaultActiveKey={`${isSidebarAccordionActive()}`}>
-            {sidebarItems.map((item, index) => {
-              return item.subMenu.length !== 0 ? (
-                  <Accordion.Item
-                      key={index.toString()}
-                      eventKey={`${index}`}
-                      className="mt-2"
-                  >
-                    <Accordion.Header>
-                      <div className="side-bar-item">
-                        {item.icon}
-                        <span className="side-bar-item-caption">
-                      {item.title}
-                    </span>
-                      </div>
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      {item.subMenu.map((subItem, index) => (
-                          <NavLink
-                              key={index.toString()}
-                              className={(navData) =>
-                                  navData.isActive
-                                      ? 'side-bar-subitem-active side-bar-subitem '
-                                      : 'side-bar-subitem'
-                              }
-                              to={subItem?.url}
-                              end
-                          >
-                            {subItem?.icon}
-                            <span className="side-bar-subitem-caption">
-                        {subItem?.title}
-                      </span>
-                          </NavLink>
-                      ))}
-                    </Accordion.Body>
-                  </Accordion.Item>
-              ) : (
-                  <NavLink
-                      className={(navData) =>
-                          navData.isActive
-                              ? 'side-bar-item-active side-bar-item mt-2'
-                              : 'side-bar-item mt-2'
-                      }
-                      to={'/'}
-                      end
-                  >
-                    {item.icon}
-                    <span className="side-bar-item-caption">
-                  {item.title}
-                </span>
-                  </NavLink>
-              );
-            })}
-          </Accordion>
+          <Accordion defaultActiveKey={isSidebarAccordionActive()}>
+  {sidebarItems.map((item, index) => (
+    <Accordion.Item
+      key={index.toString()}
+      eventKey={index.toString()}
+      className="mt-2"
+    >
+      <Accordion.Header>
+        <div className="side-bar-item">
+          {item.icon}
+          <span className="side-bar-item-caption">{item.title}</span>
+        </div>
+      </Accordion.Header>
+      <Accordion.Body>
+        {item.subMenu.map((subItem, subIndex) => (
+          <NavLink
+            key={subIndex.toString()}
+            className={(navData) =>
+              navData.isActive
+                ? 'side-bar-subitem-active side-bar-subitem'
+                : 'side-bar-subitem'
+            }
+            to={subItem?.url}
+            end
+          >
+            {subItem?.icon}
+            <span className="side-bar-subitem-caption">{subItem?.title}</span>
+          </NavLink>
+        ))}
+      </Accordion.Body>
+    </Accordion.Item>
+  ))}
+</Accordion>
+
         </div>
 
 

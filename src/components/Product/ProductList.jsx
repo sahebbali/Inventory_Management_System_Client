@@ -113,8 +113,8 @@ const ProductList = () => {
                                                     </thead>
                                                     <tbody>
                                                     {
-                                                        DataList.map((item)=>
-                                                            <tr>
+                                                        DataList.map((item, i)=>
+                                                            <tr key={i}>
                                                                 <td><p className="text-xs text-start">{item.Name}</p></td>
                                                                 <td><p className="text-xs text-start">{item.Unit}</p></td>
                                                                 <td><p className="text-xs text-start">{item.brands[0]?item.brands[0]['Name']:""}</p></td>

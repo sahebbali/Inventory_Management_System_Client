@@ -77,13 +77,13 @@ export async function FillExpenseTypeFormRequest(ObjectID) {
             store.dispatch(OnChangeExpenseTypeInput({Name:"Name",Value:FormValue['Name']}));
             return  true;
         } else {
-            debugger;
+            
             ErrorToast("Request Fail ! Try Again")
             return false;
         }
     }
     catch (e) {
-        debugger;
+       
         ErrorToast("Something Went Wrong")
         store.dispatch(HideLoader())
         return  false
