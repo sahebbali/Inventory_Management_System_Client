@@ -11,4 +11,5 @@ const RegistrationPage = () => {
     );
 };
 
+// This is Register page:
 export default RegistrationPage;
